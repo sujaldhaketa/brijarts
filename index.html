@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BRIJ ART'S | LED Boards & Signage</title>
+  <meta name="description" content="Premium LED boards, acrylic letters, neon signs & glow signage. Contact for custom signage, installation & repair." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BA</div>
+        <div>
+          <h1>BRIJ ART'S</h1>
+          <p>LED BOARDS & SIGNAGE</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Custom <span class="neon">LED & Neon</span> Signs that make your brand <span class="accent">shine</span></h2>
+        <p>We design, build and install high-quality LED boards, acrylic letters, glow signs and neon signage for shops, offices and events. Fast delivery • On-site installation • Repair & service</p>
+        
+        <div class="cta">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Quote</button>
+          <a class="btn btn-outline" href="#gallery">View Work</a>
+        </div>
+
+        <div class="features">
+          <div class="feat card">
+            <strong class="neon">Custom Design</strong>
+            <h4>CAD & Mockups</h4>
+            <p class="muted-text">Design preview & free mockup before production.</p>
+          </div>
+          <div class="feat card">
+            <strong class="neon">Installation</strong>
+            <h4>On-site Setup</h4>
+            <p class="muted-text">Installation service across city.</p>
+          </div>
+          <div class="feat card">
+            <strong class="neon">Warranty</strong>
+            <h4>1 Year Support</h4>
+            <p class="muted-text">After-sales & repair support available.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-right card" id="quote-card">
+        <h3 style="margin-top:0">Quick Enquiry</h3>
+        <p style="margin:0 0 10px 0;color:var(--muted);font-size:14px">Fill details and we will call / WhatsApp you</p>
+
+        <form id="enquiry-form" class="card" onsubmit="handleSubmit(event)">
+          <input type="text" id="name" name="name" placeholder="Your name*" required />
+          <input type="tel" id="phone" name="phone" placeholder="Mobile / WhatsApp*" required />
+          <select id="service" name="service">
+            <option>LED Boards</option>
+            <option>Acrylic Letters</option>
+            <option>Glow Sign Boards</option>
+            <option>Neon Sign</option>
+            <option>Flex Printing</option>
+            <option>All type of Advertising Work</option>
+          </select>
+          <input type="text" id="size" name="size" placeholder="Approx size (e.g. 6ft x 2ft)" />
+          <textarea id="message" name="message" rows="3" placeholder="Details / Location / Deadline"></textarea>
+          <div class="small">
+            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+            <button type="button" class="btn btn-wa-chat" onclick="openWhatsApp()">Chat on WhatsApp</button>
+          </div>
+          <p id="form-msg"></p>
+        </form>
+
+        <div class="contact-info-small">
+          <strong>Phone:</strong> <span id="phone-display">Loading...</span><br>
+          <strong>Address:</strong> <span id="address-display">Loading...</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h3 class="neon">Our Services</h3>
+      <p style="color:var(--muted); margin-bottom: 20px;">We provide end-to-end signage solutions — design, fabrication, installation and maintenance.</p>
+
+      <div class="services-grid">
+        <!-- LED Boards -->
+        <div class="service-card card">
+          <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=400" alt="LED Boards" class="service-img">
+          <h4>LED Boards</h4>
+          <p>High-quality LED boards for shops, offices, and events.</p>
+        </div>
+
+        <!-- LED Logos -->
+        <div class="service-card card">
+          <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=400" alt="LED Logos" class="service-img">
+          <h4>LED Logos</h4>
+          <p>Custom LED logo designs to make your identity shine.</p>
+        </div>
+
+        <!-- Flex -->
+        <div class="service-card card">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400" alt="Flex Printing" class="service-img">
+          <h4>Flex Printing</h4>
+          <p>High-quality flex banners and posters for advertising.</p>
+        </div>
+
+        <!-- Neon -->
+        <div class="service-card card">
+          <img src="https://images.unsplash.com/photo-1495069781661-d7fa6680a6b9?auto=format&fit=crop&q=80&w=400" alt="Neon Signs" class="service-img">
+          <h4>Neon Signs</h4>
+          <p>Trendy neon signage for cafes, bars, and home decor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Fixed Structure) -->
+    <section id="gallery" style="margin-top: 40px;">
+      <h3 class="neon">Recent Work</h3>
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1534234828569-fa36384da188?auto=format&fit=crop&q=80&w=400" alt="Work 1">
+        <img src="https://images.unsplash.com/photo-1567425121890-534a6650426d?auto=format&fit=crop&q=80&w=400" alt="Work 2">
+        <img src="https://images.unsplash.com/photo-1516669566673-8636b0431362?auto=format&fit=crop&q=80&w=400" alt="Work 3">
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:18px">
+      <h3 class="neon">About Us</h3>
+      <div class="card" style="padding:16px;margin-top:10px">
+        <p style="color:var(--muted)">BRIJ ART'S is a local signage & LED board manufacturer. We specialise in retail signage, acrylic letters and neon art. We combine modern LEDs with durable materials to create long-lasting signs for shops, showrooms and events.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h3 class="neon">Contact & Location</h3>
+      <div class="contact-grid">
+        <div class="card">
+          <h4 style="margin-top:0">Get in touch</h4>
+          <p style="color:var(--muted)">Call / WhatsApp us, or send an enquiry using the form.</p>
+          <p><strong>Phone:</strong> <span id="phone-2">Loading...</span></p>
+          <p><strong>Email:</strong> <span id="email">Loading...</span></p>
+        </div>
+        <div class="card">
+          <h4 style="margin-top:0">Visit Us</h4>
+          <p style="color:var(--muted)">H-82, Punjabi Bagh, Ashoka Garden, Bhopal 462023</p>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.5978714198377!2d77.43350907511154!3d23.25771597900963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c698c9352aca5%3A0x8d3061fc4c7a7f66!2sVerma&#39;s%20Villa!5e0!3m2!1sen!2sin!4v1765048847076!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year">2025</span> BRIJ ART'S || LED BOARDS & SIGNAGE</p>
+    </footer>
+
+  </div>
+
+  <!-- WhatsApp floating button -->
+  <a class="wa" id="wa-btn" href="#" onclick="openWhatsApp(); return false;" title="Chat on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 13.84 2.5 15.55 3.36 17.02L2 22L7.1 20.73C8.52 21.54 10.2 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20.2C10.45 20.2 9.01 19.78 7.78 19.06L7.5 18.9L4.47 19.68L5.27 16.78L5.09 16.48C4.31 15.17 3.87 13.63 3.87 12C3.87 7.52 7.52 3.87 12 3.87C16.48 3.87 20.13 7.52 20.13 12C20.13 16.48 16.48 20.2 12 20.2Z" fill="white"/>
+      <path d="M17.21 14.54C16.92 14.4 15.52 13.71 15.26 13.63C15 13.54 14.81 13.5 14.62 13.78C14.43 14.07 13.88 14.71 13.72 14.9C13.55 15.09 13.38 15.11 13.1 14.97C12.81 14.83 11.89 14.52 10.8 13.55C9.94 12.79 9.36 11.84 9.19 11.55C9.02 11.26 9.17 11.11 9.32 10.96C9.45 10.83 9.6 10.63 9.75 10.46C9.9 10.29 9.95 10.16 10.05 9.96C10.15 9.76 10.1 9.59 10.03 9.45C9.96 9.31 9.38 7.88 9.14 7.3C8.91 6.73 8.67 6.81 8.5 6.81C8.34 6.81 8.15 6.8 7.96 6.8C7.77 6.8 7.46 6.87 7.2 7.15C6.94 7.43 6.2 8.12 6.2 9.54C6.2 10.95 7.23 12.32 7.38 12.52C7.53 12.72 9.42 15.63 12.31 16.88C13 17.18 13.54 17.35 13.96 17.49C14.65 17.71 15.28 17.68 15.77 17.6C16.32 17.52 17.47 16.91 17.71 16.24C17.95 15.57 17.95 15 17.88 14.88C17.81 14.77 17.62 14.71 17.33 14.57L17.21 14.54Z" fill="white"/>
+    </svg>
+  </a>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
